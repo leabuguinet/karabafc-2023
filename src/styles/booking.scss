@@ -1,0 +1,34 @@
+@import "base";
+
+.booking-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    div {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      
+      span {
+        color: #baa4b9;
+        font-weight: 400;
+        font-size: 0.7rem;
+        margin-top: 5px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    a {
+      color: #ffffff;
+      margin-top: 2rem;
+    }
+
+    
+
+  }

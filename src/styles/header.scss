@@ -1,0 +1,50 @@
+@import "base";
+
+header {
+    //background-image: linear-gradient(0deg, rgba(0,0,26,1), rgba(0,0,0,0) 15%), url(${headerBg});
+    //background: -webkit-linear-gradient(90deg, rgba(0,0,26,1),rgba(0,0,0,0) 15%), url(${headerBg});
+    background-image: url('../assets/images/bgpink.png');
+    background-size: cover;
+    background-position: bottom;
+    //width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+    .logo {
+
+        width: clampRem(120, 200, $bp-mobile, $bp-regular);
+    }
+
+    a {
+
+        width: clampRem(250, 350, $bp-mobile, $bp-regular);
+
+        img {
+
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    
+    h1 {
+        font-weight: 500;
+    }
+
+    .scrollto {
+        display: inline-block;
+        bottom: 5%;
+        background-image: url(../assets/svg/down-arrow.svg);
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+    }
+}
+
+

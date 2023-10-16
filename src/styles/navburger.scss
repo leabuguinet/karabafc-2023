@@ -1,0 +1,117 @@
+@import "base";
+
+.navburger-button {
+
+    @include max($bp-tablet-px){
+        display: flex;
+    }
+
+  cursor: pointer;
+  z-index: 150;
+  //width: 100%;
+  display: none;
+  position: sticky;
+  //margin-top: 50px;
+  top: 30px;
+  bottom: 0;
+  left: 88%;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.6s ease-in-out;
+  
+  &::before  {
+    content: "";
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    color: white;
+    right: 0px;
+    top: 5px;
+    transition: all 0.6s ease-in-out;
+  }
+  &::after  {
+    content: "";
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    //color: white;
+    left: 0px;
+    top: -5px;
+    transition: all 0.6s ease-in-out;
+  }
+
+    &.openMenu-arrow {
+    transition: all 0.6s ease-in-out;
+
+    &::after{
+        transform: rotate(90deg) translate(5px, -0px);
+        transform-origin: center;
+
+    }
+    &::before{
+        //transform: rotate(45deg);
+        transform-origin: 0;
+        opacity: 0;
+
+    }
+
+    transform: rotate(45deg);
+
+    }
+}
+
+.navburger {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #4b3b46;
+    z-index: -100;
+    top: 0;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+  
+    &.openMenu {
+      position: sticky;
+      overflow: hidden;
+      opacity: 1;
+      z-index: 100;
+    }
+
+
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        gap: 50px;
+        height: 100%;
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            font-size: 1.2rem;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 600;
+            position: relative;
+        }
+    }
+
+
+
+
+}
