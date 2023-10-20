@@ -8,13 +8,16 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react"
 
 import Header from "./header"
 import "./layout.scss"
 import "../styles/base.scss"
 
+import Footer from "./footer"
 import NavSide from "./navside"
 import NavBurger from "./navburger"
+
 
 
 const duration = 0.5
@@ -40,9 +43,9 @@ const variants = {
   },
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageUrl }) => {
 
-  
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -53,37 +56,46 @@ const Layout = ({ children }) => {
     }
   `)
 
-  
+
+   let isIndexPage = false;
+
+    if (pageUrl === "/"){
+      isIndexPage = true;
+    }
 
   return (
     <>
-    
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <AnimatePresence mode="wait">
-        <motion.main
-                //key={location.pathname}
-                variants={variants}
-                initial="initial"
-                animate="animate"
-                exit="exit">
-        <NavSide />
-        <NavBurger />
-        
-          {children}
-        </motion.main>
+      <div className=   {isIndexPage ? "header" : "main-container"}>
+        {isIndexPage ? null : <NavSide />}
+        {isIndexPage ? null : <NavBurger />}
 
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+
+        <motion.main
+
+
+
+          initial={{ opacity: 0, y: -200 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 200 }}
+
+
+
+
+          transition={{
+            type: "spring",
+            mass: 0.35,
+            stiffness: 85,
+            
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gddatsby</a>
-        </footer>
-        </AnimatePresence>
-    </>
+            {children}
+            
+        </motion.main>
+      </div>
+      
+      {isIndexPage ? null : <Footer />}
+       
+  </>
   )
 }
 

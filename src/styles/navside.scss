@@ -5,8 +5,9 @@
   @include max($bp-tablet-px){
     display: none;
 }
-  height: 700px;
+  //height: 700px;
   width: 400px;
+  width: clampRem(300, 400, $bp-tablet, $bp-regular);
   position: sticky;
   top: 10px;
 

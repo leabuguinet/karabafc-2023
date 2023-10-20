@@ -15,16 +15,18 @@ body {
     font-family: 'League Spartan', sans-serif;
 }
 
-main {
+.main-container {
     display: flex;
     flex-direction: row;
     max-width: 1400px;
     margin: 0 auto;
 
     @include max($bp-tablet-px){
-       display: block;
-    }
+        display: block;
+     }
 }
+
+
 
 
 .main-content{
@@ -54,12 +56,8 @@ h1 {
     padding-top: 4rem;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 5rem;
-    font-size: clampRem(18, 20, $bp-mobile, $bp-regular);
-    /* @media ${device.tabletL} { 
-        margin-bottom: 3rem;
-        text-align: center;
-    } */
+    margin-bottom: 1rem;
+    font-size: clampRem(18, 22, $bp-mobile, $bp-regular);
     @include max($bp-tablet-px){
         margin-bottom: 3rem;
         padding-top: 2rem;
@@ -68,10 +66,9 @@ h1 {
 }
 
 h2 {
-    margin: 3rem 0;
+    margin: 1rem 0;
     font-weight: 400;
-    font-size: 1rem;
-    //font-size: clamp(1rem, 0.9333333333333333rem + 1.3333333333333335vw, 1.5rem);
+    font-size: clampRem(16, 20, $bp-mobile, $bp-regular);
     @include max($bp-tablet-px){
         margin: 1rem 0;
     }
@@ -79,8 +76,7 @@ h2 {
 
 p {
     line-height: 1.3;
-    font-size: 0.8rem;
-    //font-size: clamp(0.8rem, 0.9333333333333333rem + 1.3333333333333335vw, 1rem);
+    font-size: clampRem(15, 18, $bp-mobile, $bp-regular);
 }
 
 .p-mb{

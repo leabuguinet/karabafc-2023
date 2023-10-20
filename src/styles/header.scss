@@ -20,7 +20,7 @@ header {
         width: clampRem(120, 200, $bp-mobile, $bp-regular);
     }
 
-    a {
+    .ep-link {
 
         width: clampRem(250, 350, $bp-mobile, $bp-regular);
 
@@ -32,7 +32,9 @@ header {
     }
     
     h1 {
+        font-size: clampRem(20, 25, $bp-mobile, $bp-regular);
         font-weight: 500;
+        margin-bottom: 3rem;
     }
 
     .scrollto {

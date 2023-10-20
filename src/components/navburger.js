@@ -38,7 +38,7 @@ export default function NavBurger() {
       
       <div className="navbar">
         <img className="logo" src={karabalogo} alt='' />
-        <Link onClick={handleClickOnLink} to="/">TOUR</Link>
+        <Link onClick={handleClickOnLink} to="/tour">TOUR</Link>
         <Link onClick={handleClickOnLink} to="/musique">MUSIQUE</Link>
         <Link onClick={handleClickOnLink} to="/merch">MERCH</Link>
         <Link onClick={handleClickOnLink} to="/booking">BOOKING</Link>

@@ -6,3 +6,9 @@
 
 // You can delete this file if you're not using it
 import "./src/styles/base.scss"
+
+import React from 'react';
+import {AnimatePresence} from 'framer-motion';
+export const wrapPageElement = ({element}) => (
+  <AnimatePresence mode="wait">{element}</AnimatePresence>
+);
