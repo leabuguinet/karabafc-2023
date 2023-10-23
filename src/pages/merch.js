@@ -1,5 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
+import Seo from "../components/seo"
 import Layout from "../components/layout"
 import KarabaK7 from "../assets/images/Karaba-F.C-k7.jpeg"
 import KarabaVinyl from "../assets/images/vinyl-aprildancer-karabafc.jpeg"
@@ -118,5 +119,5 @@ const Merch = ({ location }) => {
     </Layout>
   )
 }
-
+export const Head = () => <Seo title="Merch" description="KARABA F.C. Merch - Vinyle, k7, tshirts" />
 export default Merch

@@ -4,6 +4,7 @@ import NavBurger from "../components/navburger"
 import NavSide from "../components/navside"
 import KarabaFCGig from "../assets/images/Karaba-F.C-gig2.jpg"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 import "../styles/base.scss"
 import "../styles/booking.scss"
@@ -55,5 +56,7 @@ const Booking = ({ location }) => {
     </Layout>
   )
 }
+
+export const Head = () => <Seo title="Booking" description="KARABA F.C. Book us - Contactez-nous" />
 
 export default Booking

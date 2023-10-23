@@ -1,6 +1,7 @@
 import React from "react"
 import { useRef, useEffect } from "react"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import NavBurger from "../components/navburger"
 import NavSide from "../components/navside"
 //import YoutubeEmbed from './YoutubeEmbed'
@@ -185,5 +186,6 @@ const Music = ({ location }) => {
     </Layout>
   )
 }
+export const Head = () => <Seo title="Musique" description="KARABA F.C. Écoutez April Dancer, Empty Rooms - Vidéos disponibles" />
 
 export default Music
