@@ -7,45 +7,35 @@ import "../styles/navburger.scss"
 
 export default function NavBurger() {
 
-  //const Element = Scroll.Element;
-
-  const handleClick = event => {
+  const openBurgerMenu = event => {
     event.currentTarget.classList.toggle('openMenu-arrow');
-    let NavBarContainer = document.querySelector('.navburger');
-    NavBarContainer.classList.toggle('openMenu');
-    document.body.classList.toggle('no-scroll');
-  
-  };
 
-  const handleClickOnLink = event => {
-    document.querySelector('navburger-button').classList.toggle('openMenu-arrow');
     let NavBarContainer = document.querySelector('.navburger');
-    NavBarContainer.classList.toggle('openMenu');
-    document.body.classList.toggle('no-scroll')
+    if(NavBarContainer){
+      NavBarContainer.classList.toggle('openMenu');
+    }
+
+    let mainContent = document.querySelector('main');
+    if(mainContent){
+      mainContent.classList.toggle('no-scroll');
+    }
   
   };
 
   return (
     <>
-    <span onClick={handleClick} className='navburger-button'></span>
+    
+    <span onClick={openBurgerMenu} className='navburger-button'></span>
     <nav className="navburger">
-      
-     {/*  <Element name="">
-        <a href="https://karabafc.com"><Logo src={karabalogo} alt='KARABA FC' /></a>
-      </Element> */}
-
-
       
       <div className="navbar">
         <img className="logo" src={karabalogo} alt='' />
-        <Link onClick={handleClickOnLink} to="/tour">TOUR</Link>
-        <Link onClick={handleClickOnLink} to="/musique">MUSIQUE</Link>
-        <Link onClick={handleClickOnLink} to="/merch">MERCH</Link>
-        <Link onClick={handleClickOnLink} to="/booking">BOOKING</Link>
+        <Link  to="/tour">TOUR</Link>
+        <Link  to="/musique">MUSIQUE</Link>
+        <Link  to="/merch">MERCH</Link>
+        <Link  to="/booking">BOOKING</Link>
 
       </div>
-
-      
 
     </nav>
     </>

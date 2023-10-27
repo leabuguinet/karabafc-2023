@@ -15,6 +15,13 @@
     align-items: center;
   }
 
+  .previousgigs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
   button {
     width: 30px;
     height: 30px;

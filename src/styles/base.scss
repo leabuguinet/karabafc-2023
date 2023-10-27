@@ -13,6 +13,7 @@ body {
     //background-color:  #00001a;
     background-color: #4b3b46;
     font-family: 'League Spartan', sans-serif;
+    min-height: 100vh;
 }
 
 .main-container {
@@ -34,6 +35,7 @@ body {
     //margin-top: 4rem;
     display: flex;
     flex-direction: column;
+    min-height: 70vh;
 
     @include max($bp-tablet-px){
         
@@ -45,7 +47,7 @@ body {
 
 
 .no-scroll {
-    overflow-y: hidden;
+    display: none;
 }
 
 h1, h2, h3, p{
@@ -84,6 +86,7 @@ p {
 }
 
 span {
+    font-size: clampRem(15, 18, $bp-mobile, $bp-regular);
     font-weight: 600;
 }
 

@@ -54,31 +54,23 @@ let nextGig = [];
 
 passedGig.reverse();
 
-
-
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    y: 0,
-    scale: 0.8
-  },
-  in: {
+const container = {
+  hidden: { opacity: 0 },
+  show: {
     opacity: 1,
-    x: 0,
-    scale: 1
-  },
-  out: {
-    opacity: 0,
-    x: "-0vw",
-    scale: 1.2
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.5
+    }
   }
-};
+}
 
-const pageTransition = {
-  type: "tween",
-  ease: "easeInOut",
-  duration: 0.8
-};
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 }
+}
+
+
 
 const Tour = ({ location }) => {
   const pageUrl = location.pathname;
@@ -106,22 +98,30 @@ const Tour = ({ location }) => {
           }
         </div>
 
-        <h2 className="previousGigs"><span>Dates précédentes</span> <button onClick={(handleClick)} /></h2>
+        <h2 className="previousgigs"><span>Dates précédentes</span> <button onClick={(handleClick)} /></h2>
 
+
+        <AnimatePresence>
         {isShown && (
-          <div className='previousgigs-list'>
+          <motion.div className='previousgigs-list'
+          key="1"
+          variants={container}
+          initial="hidden"
+          animate="show">
             { passedGig.map((data) => {
 
-              return <EventCard data={data} key={data.id}/>
+              return <EventCard data={data} key={data.id} variants={item}/>
               })
             }
-          </div>
+          </motion.div>
         )}
+        </AnimatePresence>
 
       </div>
     </Layout>
     </>
   )
+
 
   }
 

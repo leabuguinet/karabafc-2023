@@ -94,8 +94,8 @@ const Music = ({ location }) => {
         <h2>EP</h2>
 
         <div className="album-list">
-          <div className="album">
-            <img alt="" src={aprilDancer} />
+          <div className="album" style={{ backgroundImage: `url(${aprilDancer})` }}>
+          
 
             <div className="album-info closed" ref={ref2}>
               <h3>APRIL DANCER</h3>
@@ -121,8 +121,7 @@ const Music = ({ location }) => {
             </div>
           </div>
 
-          <div className="album">
-            <img alt="" src={emptyRooms} />
+          <div className="album" style={{ backgroundImage: `url(${emptyRooms})` }}>
 
             <div className="album-info closed" ref={ref}>
               <h3>EMPTY ROOMS</h3>

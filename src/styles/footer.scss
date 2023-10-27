@@ -1,4 +1,7 @@
+@import "base";
+
 footer {
+
 
     color: white;
     width: 100%;
@@ -16,8 +19,8 @@ footer {
     .icons-list {
         display: flex;
         justify-content: center;
-        padding: 8rem 0 4rem 0;
-        gap: 40px;
+        padding: clampRem(50, 200, $bp-mobile, $bp-regular) 0 4rem 0;
+        gap:clampRem(20, 40, $bp-mobile, $bp-regular);
 
 /*         a svg.logo-1 path {
             fill: url(#logo-gradient1) #baa4b9;
@@ -36,7 +39,7 @@ footer {
             } */
         
           svg:hover{
-              transform: scale(1.08);
+              transform: scale(1.1);
           }
         
           svg.logo-1, svg.logo-2, svg.logo-3, svg.logo-4 {

@@ -16,3 +16,23 @@ exports.createPages = async ({ actions }) => {
     defer: true,
   })
 }
+
+exports.onCreateWebpackConfig = ({
+  actions
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(zip)$/i,
+          use: {
+            loader: "url-loader",
+            options: {
+              limit: 9000,
+            },
+          }
+        },
+      ]
+    }
+  })
+}
