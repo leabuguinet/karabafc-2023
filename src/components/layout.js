@@ -6,11 +6,8 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { motion, AnimatePresence } from "framer-motion"
-import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 
-import Header from "./header"
 import "./layout.scss"
 import "../styles/base.scss"
 
@@ -18,44 +15,7 @@ import Footer from "./footer"
 import NavSide from "./navside"
 import NavBurger from "./navburger"
 
-
-
-const duration = 0.5
-const variants = {
-  initial: {
-    opacity: 0,
-    x: 100
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    x: 0,
-    transition: {
-      duration: duration,
-      delay: duration,
-      when: "beforeChildren",
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: 200,
-    transition: { duration: duration },
-  },
-}
-
 const Layout = ({ children, pageUrl }) => {
-
-
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
 
    let isIndexPage = false;
 

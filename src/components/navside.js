@@ -1,15 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import karabalogo from "../assets/icons/KarabaFC-logo-white-light.png";
-import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import "../styles/navside.scss"
 
 
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-
-
-const NavSide = ({ siteTitle, location }) => (
+const NavSide = () => (
   <>
   <div className="nav-container">
       

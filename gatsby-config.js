@@ -15,12 +15,12 @@ module.exports = {
     siteUrl: `https://karabafc.com`,
   },
   plugins: [
-    /* {
+    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: [ '/winchestaaa' ]
+        excludes: [ `/winchestaaa`, `/404`, `/mentions` ]
       },
-    } */
+    },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,

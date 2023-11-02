@@ -2,70 +2,45 @@
 
 footer {
 
+  color: white;
+  width: 100%;
+  background-image: url('../assets/images/bgpink.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 
-    color: white;
-    width: 100%;
-    background-image: url('../assets/images/bgpink.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-  
+
+  .icons-list {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-  
-    margin-top: 2rem;
-  
-    .icons-list {
-        display: flex;
-        justify-content: center;
-        padding: clampRem(50, 200, $bp-mobile, $bp-regular) 0 4rem 0;
-        gap:clampRem(20, 40, $bp-mobile, $bp-regular);
+    padding: clampRem(50, 100, $bp-mobile, $bp-regular) 0 4rem 0;
+    gap: clampRem(20, 40, $bp-mobile, $bp-regular);
 
-/*         a svg.logo-1 path {
-            fill: url(#logo-gradient1) #baa4b9;
-            }
-        
-          a svg.logo-2 path {
-            fill: url(#logo-gradient2) #baa4b9;
-            }
-        
-          a svg.logo-3 path {
-            fill: url(#logo-gradient3) #ffffff;
-            }
-        
-          a svg.logo-4 path {
-            fill: url(#logo-gradient4) #ffffff;
-            } */
-        
-          svg:hover{
-              transform: scale(1.1);
-          }
-        
-          svg.logo-1, svg.logo-2, svg.logo-3, svg.logo-4 {
-            transition: 1s ease-in-out;
-        
-            &:hover stop:first-child {
-            stop-color: #baa4b9;
-            }
-        
-            &:hover stop:last-child {
-              stop-color: #baa4b9;
-            }
-          }
-        
-          stop {
-            transition: 1s;
-          }
+    svg:hover {
+      transform: scale(1.1);
     }
 
-
-    span {
-        margin-bottom: 2rem ;
-        a{
-          text-decoration: none;
-          color: #ffffff;
-        }
+    svg.logo-1,
+    svg.logo-2,
+    svg.logo-3,
+    svg.logo-4 {
+      transition: 1s ease-in-out;
     }
+
+  }
+
+
+  span {
+    margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+  }
 
 }

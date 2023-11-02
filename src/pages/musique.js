@@ -2,14 +2,8 @@ import React from "react"
 import { useRef, useEffect } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import NavBurger from "../components/navburger"
-import NavSide from "../components/navside"
-//import YoutubeEmbed from './YoutubeEmbed'
-import { AnimatePresence, motion } from "framer-motion"
 import "../styles/base.scss"
 import "../styles/musique.scss"
-
-//import arrowDown from '../assets/icons/down-arrow.svg'
 
 import AmIcon from "../assets/svg/icon-applemusic.inline.svg"
 import BcIcon from "../assets/svg/icon-bandcamp.inline.svg"
@@ -19,32 +13,6 @@ import ExtLink from "../assets/svg/external-link.inline.svg"
 
 import emptyRooms from "../assets/images/Karaba-F.C-Empty-Rooms_Cover_Discogs.jpg"
 import aprilDancer from "../assets/images/aprildancer-artwork.jpeg"
-
-const KarabaClipUrl = "https://youtu.be/zPwLwzbASlk"
-
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    y: 0,
-    scale: 0.8,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    x: "-0vw",
-    scale: 1.2,
-  },
-}
-
-const pageTransition = {
-  type: "tween",
-  ease: "easeInOut",
-  duration: 0.8,
-}
 
 const Music = ({ location }) => {
   //ALBUM HOVER

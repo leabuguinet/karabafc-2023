@@ -1,10 +1,5 @@
 import React, { useState } from 'react'
-//import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import { AnimatePresence, motion } from "framer-motion";
-import Header from '../components/header';
-import NavBurger from '../components/navburger';
-import NavSide from '../components/navside';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -13,6 +8,7 @@ import "../styles/tour.scss"
 
 import dataDates from '../assets/data/data-dates.json'
 import EventCard from '../components/EventCard'
+import NoEventcard from '../components/noeventcard';
 
 
 let currentYear = new Date().getFullYear().toString();
@@ -34,7 +30,7 @@ let nextGig = [];
       return nextGig.push(data);
     } 
     
-    if (gigMonth == currentMonth){
+    if (gigMonth === currentMonth){
 
       if(gigDay >= currentDay){
 
@@ -90,6 +86,9 @@ const Tour = ({ location }) => {
         <h1>Prochaines dates</h1>
 
         <div className='nextgigs-list'>
+
+          {nextGig.length === 0 ? <NoEventcard /> : null}
+
           { nextGig.map( (data) => {
       
             return <EventCard data={data} key={data.id}/>
@@ -98,7 +97,7 @@ const Tour = ({ location }) => {
           }
         </div>
 
-        <h2 className="previousgigs"><span>Dates précédentes</span> <button onClick={(handleClick)} /></h2>
+        <h2 className="previousgigs"><span>Dates précédentes</span> <button aria-label="Afficher les concerts précédents" onClick={(handleClick)} /></h2>
 
 
         <AnimatePresence>

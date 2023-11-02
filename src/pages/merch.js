@@ -1,5 +1,4 @@
 import React from "react"
-import { motion } from "framer-motion"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import KarabaK7 from "../assets/images/Karaba-F.C-k7.jpeg"
@@ -8,30 +7,6 @@ import KarabaTshirt from "../assets/images/Karaba-F.C-tshirt2.png"
 
 import "../styles/base.scss"
 import "../styles/merch.scss"
-
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    y: 0,
-    scale: 0.8,
-  },
-  in: {
-    opacity: 1,
-    x: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    x: "-0vw",
-    scale: 1.2,
-  },
-}
-
-const pageTransition = {
-  type: "tween",
-  ease: "easeInOut",
-  duration: 0.8,
-}
 
 const Merch = ({ location }) => {
   const pageUrl = location.pathname
