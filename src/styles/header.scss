@@ -21,6 +21,15 @@ header {
         width: clampRem(120, 150, $bp-mobile, $bp-regular);
     }
 
+    .home-video {
+        width: clampRem(280, 800, $bp-mobile, $bp-regular);
+
+        iframe{
+            width: 100%;
+            aspect-ratio: 16/9;
+        }
+    }
+
     .ep-link {
 
         width: clampRem(250, 250, $bp-mobile, $bp-regular);

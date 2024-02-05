@@ -30,10 +30,27 @@ const Index = ({ location }) => {
           stiffness: 75,
           duration: 4000
       }}>
-
+        
         <img className="logo" src={karabalogo} alt=""></img>
+        {/* 
         <a aria-label="Lien vers l'EP" className="ep-link"href="https://distrokid.com/hyperfollow/karabafc/april-dancer"><img src={singleCover} alt=""/></a>
-        <h1>NEW EP OUT!</h1>
+        <h1>NEW EP OUT!</h1> */}
+
+        <div className="home-video">
+          <iframe
+            src="https://www.youtube.com/embed/3sQ80Gsc4hY?si=8nHuuVyA7M_1M778"
+            title="videoTitle"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowFullScreen
+          />
+        </div>
+        <h1>NEW LIVE SESSION</h1>
+
+
+
+
         <Link to="/tour" state={{modal: true}}><div className="scrollto" > </div></Link>
 
 
@@ -50,6 +67,6 @@ const Index = ({ location }) => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="April Dancer" description="Indie / Post-hardcore / 90s Emo entre Paris et Brest - NEW EP APRIL DANCER OUT" />
 
 export default Index
