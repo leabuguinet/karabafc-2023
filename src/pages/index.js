@@ -67,6 +67,6 @@ const Index = ({ location }) => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="April Dancer" description="Indie / Post-hardcore / 90s Emo entre Paris et Brest - NEW EP APRIL DANCER OUT" />
+export const Head = () => <Seo title="Accueil" description="Indie / Post-hardcore / 90s Emo entre Paris et Brest - NEW EP APRIL DANCER OUT" />
 
 export default Index
