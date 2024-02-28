@@ -38,7 +38,7 @@ const Index = ({ location }) => {
 
         <div className="home-video">
           <iframe
-            src="https://www.youtube.com/embed/3sQ80Gsc4hY?si=8nHuuVyA7M_1M778"
+            src="https://www.youtube.com/embed/Z0992lzbbXU?si=q-KIr548bjMu8cup"
             title="videoTitle"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             webkitallowfullscreen="true"
