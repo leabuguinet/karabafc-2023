@@ -14,14 +14,13 @@ import NoEventcard from '../components/noeventcard';
 let currentYear = new Date().getFullYear().toString();
 let currentMonth = (new Date().getMonth() + 1).toString();
 let currentDay = new Date().getDate().toString();
-let passedGig = [];
+let archived = [];
 let nextGig = [];
 
-// eslint-disable-next-line no-lone-blocks
 { dataDates.map( (data) => {
   let gigYear = data.year.toString();
-  let gigMonth = parseInt(data.month.toString(), 10);
-  let gigDay = parseInt(data.day.toString(), 10);
+  let gigMonth = parseInt(data.month, 10).toString();
+  let gigDay = parseInt(data.day, 10).toString();
 
   if(gigYear === currentYear){
 
@@ -36,7 +35,7 @@ let nextGig = [];
 
         return nextGig.push(data);
       }
-      return passedGig.push(data);
+      return archived.push(data);
     }
 
   } else if (gigYear > currentYear){
@@ -44,11 +43,11 @@ let nextGig = [];
       return nextGig.push(data);
   }
 
-  return passedGig.push(data);
+  return archived.push(data);
   })
 }
 
-passedGig.reverse();
+archived.reverse();
 
 const container = {
   hidden: { opacity: 0 },
@@ -78,12 +77,16 @@ const Tour = ({ location }) => {
     event.target.classList.toggle('opened');
   };
 
+  
+
   return (
     <>
       <Layout pageUrl={pageUrl}>
       
       <div className='main-content tour'>
         <h1>Prochaines dates</h1>
+
+        
 
         <div className='nextgigs-list'>
 
@@ -107,7 +110,7 @@ const Tour = ({ location }) => {
           variants={container}
           initial="hidden"
           animate="show">
-            { passedGig.map((data) => {
+            { archived.map((data) => {
 
               return <EventCard data={data} key={data.id} variants={item}/>
               })
