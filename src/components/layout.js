@@ -32,14 +32,9 @@ const Layout = ({ children, pageUrl }) => {
 
         <motion.main
 
-
-
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 200 }}
-
-
-
 
           transition={{
             type: "spring",

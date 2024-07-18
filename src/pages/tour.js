@@ -17,31 +17,11 @@ let currentDay = new Date().getDate().toString();
 let archived = [];
 let nextGig = [];
 
-console.log(currentMonth);
-console.log(parseInt(dataDates[20].month).toString());
-let test = parseInt(dataDates[20].year).toString();
-
-if(currentYear < test){
-  console.log('current  inferieur a date concert')
-}
-
-if(currentYear > test){
-  console.log('current  supérieur a date concert')
-}
-
-if(currentYear === test){
-  console.log('current  egal a date concert')
-}
-
-
-
 
 { dataDates.map( (data) => {
   let gigYear = data.year.toString();
   let gigMonth = parseInt(data.month, 10).toString();
   let gigDay = parseInt(data.day, 10).toString();
-
-  let currentMonth2 = parseInt(currentMonth, 10).toString();
 
   if(gigYear === currentYear){
 
@@ -57,7 +37,6 @@ if(currentYear === test){
 
 
     }
-    
    
 
   } else if (gigYear > currentYear){
