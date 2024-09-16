@@ -12,16 +12,19 @@ import NoEventcard from '../components/noeventcard'
 
 
 let currentYear = new Date().getFullYear().toString();
-let currentMonth = (new Date().getMonth() + 1).toString();
-let currentDay = new Date().getDate().toString();
+let currentMonth = parseInt((new Date().getMonth() + 1).toString(), 10);
+let currentDay = parseInt(new Date().getDate().toString(), 10);
 let archived = [];
 let nextGig = [];
 
 
 { dataDates.map( (data) => {
   let gigYear = data.year.toString();
-  let gigMonth = parseInt(data.month, 10).toString();
-  let gigDay = parseInt(data.day, 10).toString();
+  let gigMonth = parseInt(data.month, 10);
+  let gigDay = parseInt(data.day, 10);
+
+  console.log(gigMonth);
+  console.log(currentMonth);
 
   if(gigYear === currentYear){
 
@@ -31,10 +34,7 @@ let nextGig = [];
 
     } else {
 
-      
-
       return nextGig.push(data);
-
 
     }
    
@@ -86,8 +86,6 @@ const Tour = ({ location }) => {
       
       <div className='main-content tour'>
         <h1>Prochaines dates</h1>
-
-        
 
         <div className='nextgigs-list'>
 

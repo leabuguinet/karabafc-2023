@@ -265,6 +265,15 @@
         "location": "La Clef",
         "eventlink": "https://facebook.com/events/s/mad-foxes-karaba-fc/437246668749403/",
         "description": ""
+    },
+    {
+        "id": "26",
+        "day": "12",
+        "month": "12",
+        "year": "2024",
+        "city": "Paris",
+        "location": "La Java",
+        "eventlink": "https://www.helloasso.com/associations/cosmic-noise-pudding/evenements/fragile-x-yeahrs-x-karaba-fc-la-java/",
+        "description": ""
     }
-
 ]
