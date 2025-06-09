@@ -272,8 +272,58 @@
         "month": "12",
         "year": "2024",
         "city": "Paris",
-        "location": "La Java",
+        "location": "La Mécanique Ondulatoire",
         "eventlink": "https://www.helloasso.com/associations/cosmic-noise-pudding/evenements/fragile-x-yeahrs-x-karaba-fc-la-java/",
+        "description": ""
+    },
+    {
+        "id": "27",
+        "day": "08",
+        "month": "01",
+        "year": "2025",
+        "city": "Bordeaux",
+        "location": "L'Antidote",
+        "eventlink": "https://www.facebook.com/events/s/karaba-fc-lidylle-despiteevery/591814196832532/",
+        "description": ""
+    },
+    {
+        "id": "28",
+        "day": "09",
+        "month": "01",
+        "year": "2025",
+        "city": "Rennes",
+        "location": "La Tête de Chou",
+        "eventlink": "https://www.facebook.com/events/1142289183955388/",
+        "description": ""
+    },
+    {
+        "id": "29",
+        "day": "10",
+        "month": "01",
+        "year": "2025",
+        "city": "Brest",
+        "location": "Coco's Bar",
+        "eventlink": "https://www.facebook.com/events/s/collectif-diskar-x-karaba-fcli/3928110340808084/",
+        "description": ""
+    },
+    {
+        "id": "30",
+        "day": "28",
+        "month": "03",
+        "year": "2025",
+        "city": "Paris",
+        "location": "La Cantine de Belleville",
+        "eventlink": "https://www.facebook.com/events/1164168818411904/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D&__cft__[0]=AZX3kI-CN5YIhItEzgmOSB9FlW6LTauEmSNNeMDDQPyiGyxQ2oiir3wtZeB-EFMBmLtPm8zhgWT5XUFX_LGX0YTIpXcdgyKZoGHBUWg3_8phIu_zQpDuUJ6O8imRqA-H75_Ha7xBuhG5JNG_PVETVA9WsLehEQEObtU_SuQx9vG2y7LWNKnwOoSN9ZjkO9kYNSc&__tn__=H-R",
+        "description": ""
+    },
+    {
+        "id": "31",
+        "day": "03",
+        "month": "04",
+        "year": "2025",
+        "city": "Paris",
+        "location": "Le Klub",
+        "eventlink": "https://www.helloasso.com/associations/headache-booking/evenements/gillian-carter-crossed-karaba-fc",
         "description": ""
     }
 ]

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Helmet from "react-helmet"
+
 import { Link } from "gatsby"
 import { motion } from "framer-motion";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import karabalogo from "../assets/icons/KarabaFC-logo-white-light.png";
+import karabalogo2025 from "../assets/icons/Karaba-Logo-2025-Transparent.png";
 import singleCover from "../assets/images/aprildancer-artwork.jpeg";
 
 import "../styles/base.scss"
@@ -13,6 +16,52 @@ import "../styles/header.scss"
 const Index = ({ location }) => {
 
   const pageUrl = location.pathname;
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.FinisherHeader) {
+      new window.FinisherHeader({
+        "count": 7,
+  "size": {
+    "min": 562,
+    "max": 1188,
+    "pulse": 2
+  },
+  "speed": {
+    "x": {
+      "min": 0.6,
+      "max": 3
+    },
+    "y": {
+      "min": 0.6,
+      "max": 3
+    }
+  },
+  "colors": {
+    "background": "#ffffff",
+    "particles": [
+      "#4d5431",
+      "#367485",
+      "#ecc752",
+      "#debbb5",
+      "#714782",
+      "#392766",
+          "#4d5431",
+    ]
+  },
+  "blending": "none",
+  "opacity": {
+    "center": 0.9,
+    "edge": 0
+  },
+  "skew": 0,
+  "shapes": [
+    "c"
+  ]
+      });
+    }
+  }, []);
+
+
 
   return (
     <>
@@ -31,12 +80,12 @@ const Index = ({ location }) => {
           duration: 4000
       }}>
         
-        <img className="logo" src={karabalogo} alt=""></img>
+        {/* <img className="logo" src={karabalogo} alt=""></img> */}
         {/* 
         <a aria-label="Lien vers l'EP" className="ep-link"href="https://distrokid.com/hyperfollow/karabafc/april-dancer"><img src={singleCover} alt=""/></a>
         <h1>NEW EP OUT!</h1> */}
 
-        <div className="home-video">
+        {/* <div className="home-video">
           <iframe
             src="https://www.youtube.com/embed/Z0992lzbbXU?si=q-KIr548bjMu8cup"
             title="videoTitle"
@@ -47,7 +96,14 @@ const Index = ({ location }) => {
           />
         </div>
         <h1>NEW LIVE SESSION</h1>
+ */}
 
+
+
+
+   <div className="header finisher-header logo-mask" >
+    Logo, navigation, etc.
+  </div>
 
 
 
