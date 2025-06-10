@@ -1,25 +1,47 @@
 @import "base";
 
 .nav-container {
-
-  @include max($bp-tablet-px){
+  @include max($bp-tablet-px) {
     display: none;
-}
+  }
   //height: 700px;
   width: 400px;
   width: clampRem(300, 400, $bp-tablet, $bp-regular);
   position: sticky;
   top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .logo {
+  /* .logo {
     display: inline-block;
     width: 155px;
     padding: 2rem 0 0 3rem;
 
-    img{
+    img {
       object-fit: contain;
       max-width: 100%;
     }
+  } */
+
+   .logo-mask {
+    padding: 2rem;
+    mask-type: alpha;
+    width: 200px;
+    max-width: 350px;
+    height: 100px; /* adjust as needed */
+    position: relative;
+    -webkit-mask-image: url("../assets/icons/svg5.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: url("../assets/icons/svg5.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background: transparent;
+    overflow: hidden;
   }
 
   .navbar {
@@ -32,10 +54,18 @@
     &::after {
       content: "";
       width: 1px;
-      height: 300px;
-      color: white;
+      height: 400px;
       position: absolute;
-      background: white;
+      //background: rgb(56, 39, 39);
+      background: linear-gradient(
+        0deg,
+        $pink 0%,
+        $purple 10%,
+        $green 30%,
+        $blue 50%,
+
+        $beige 100%
+      );
       left: 225px;
 
       //PHONE
@@ -44,41 +74,42 @@
     } */
     }
 
-
-
     a {
-      color: #ffffff;
+      width: fit-content;
+      color: $green;
       text-decoration: none;
       margin: 1rem 2rem;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
-      font-size: 1.2rem;
+      font-size: 1.7rem;
       font-family: "League Spartan", sans-serif;
-      font-weight: 600;
+      font-weight: 300;
       position: relative;
       width: 135px;
+      transition: all 0.3s ease;
 
-      &.active {
+    
 
-        &::after{
-          background-image: url('../assets/icons/water-drop.svg');
-          width: 15px; 
+      /* &.active {
+        &::after {
+          background-image: url("../assets/icons/water-drop.svg");
+          width: 15px;
           height: 15px;
           background-size: contain;
           background-repeat: none;
           position: absolute;
           right: 150px;
           bottom: 10px;
-          content:'';
+          content: "";
         }
-      }
+      } */
 
-      &::before{
+      /* &::before {
         content: "";
-        background-image: url('../assets/icons/water-drop.svg');
+        background-image: url("../assets/icons/water-drop.svg");
         background-size: contain;
         background-repeat: none;
-        width: 15px; 
+        width: 15px;
         height: 15px;
         position: absolute;
         right: 150px;
@@ -86,14 +117,27 @@
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         bottom: 120px;
-      }
+      } */
+
+      /* &.active {
+        background: linear-gradient(90deg, $purple 0%, $violet 50%, $pink 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease;
+      } */
 
       &:hover {
-        &::before{
-          -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-          animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        background: linear-gradient(90deg, $violet 0%, $blue 80%, $green 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease;
+
+        /* &::before {
+          -webkit-animation: fade-in-top 0.6s
+            cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
           opacity: 0;
-        }
+        } */
       }
     }
   }
@@ -101,26 +145,25 @@
   @-webkit-keyframes fade-in-top {
     0% {
       -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+      transform: translateY(0px);
       opacity: 0;
     }
     100% {
       -webkit-transform: translateY(110px);
-              transform: translateY(110px);
+      transform: translateY(110px);
       opacity: 1;
     }
   }
   @keyframes fade-in-top {
     0% {
       -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+      transform: translateY(0px);
       opacity: 0;
     }
     100% {
       -webkit-transform: translateY(110px);
-              transform: translateY(110px);
+      transform: translateY(110px);
       opacity: 1;
     }
   }
 }
-

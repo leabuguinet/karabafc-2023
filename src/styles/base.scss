@@ -13,6 +13,7 @@ body {
     //background-color:  #00001a;
     //background-color: #4b3b46;
     background-color: #4b3b46;
+    background-color: #bfbfba;
     font-family: 'League Spartan', sans-serif;
     min-height: 100vh;
 }
@@ -56,15 +57,16 @@ main {
 }
 
 h1, h2, h3, p{
-    color: #ffffff;
+    color: $green;
 }
 
 h1 {
-    padding-top: 4rem;
-    text-transform: uppercase;
+    padding-top: 5rem;
+    text-transform: lowercase;
     text-align: center;
     margin-bottom: 1rem;
-    font-size: clampRem(18, 22, $bp-mobile, $bp-regular);
+    font-size: clampRem(18, 25, $bp-mobile, $bp-regular);
+    font-weight: 400;;
     @include max($bp-tablet-px){
         margin-bottom: 3rem;
         padding-top: 2rem;
@@ -91,7 +93,7 @@ p {
 }
 
 span {
-    font-size: clampRem(15, 18, $bp-mobile, $bp-regular);
+    font-size: clampRem(15, 22, $bp-mobile, $bp-regular);
     font-weight: 600;
 }
 

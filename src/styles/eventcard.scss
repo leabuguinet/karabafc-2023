@@ -1,7 +1,7 @@
 @import "base";
 
 .eventcard {
-  color: white;
+  color: $green;
   width: clampRem(250, 600, $bp-mobile, $bp-regular);
   //max-width: 600px;
   max-width: 700px;
@@ -42,9 +42,10 @@
     );
     background: linear-gradient(
       130deg,
-      rgba(0, 0, 26, 0) 0%,
-      rgba(0, 27, 92, 0) 42%,
-      rgba(119, 98, 112, 0.843)
+      #00001a00 0%,
+      #debbb54f 42%,
+      #4d543154 42%,
+      #ecc852be
     );
 
     opacity: 0;
@@ -59,7 +60,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: $purple;
     width: auto;
     min-width: 90px;
 
@@ -83,7 +84,7 @@
     }
 
     span:last-child {
-      color: #baa4b9;
+      color: $purple;
       letter-spacing: 2px;
     }
   }
@@ -102,7 +103,7 @@
 
     span {
       margin-right: 4px;
-      font-weight: 400;
+      font-weight: 300;
       text-align: start;
 
       @include max($bp-mobile-px){
@@ -110,18 +111,18 @@
       }
 
       .location {
-        font-size: 0.8rem;
-        font-size: clamp(
+        font-size: 1rem;
+        /* font-size: clamp(
           0.8rem,
           0.9333333333333333rem + 1.3333333333333335vw,
           1.5rem
-        );
+        ); */
       }
     }
 
     a {
-      color: #ffffff;
-      fill: #ffffff;
+      color: $green;
+      fill: $green;
       text-decoration: none;
 
       &:hover svg .link-arrow {

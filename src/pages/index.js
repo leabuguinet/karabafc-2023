@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Helmet from "react-helmet"
+
 
 import { Link } from "gatsby"
 import { motion } from "framer-motion";
@@ -102,12 +102,12 @@ const Index = ({ location }) => {
 
 
    <div className="header finisher-header logo-mask" >
-    Logo, navigation, etc.
+
   </div>
 
 
 
-        <Link to="/tour" state={{modal: true}}><div className="scrollto" > </div></Link>
+        <Link to="/symbionts" state={{modal: true}}><div className="scrollto" > </div></Link>
 
 
       </motion.header>

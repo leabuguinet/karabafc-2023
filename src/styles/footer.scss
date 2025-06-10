@@ -4,9 +4,10 @@ footer {
 
   color: white;
   width: 100%;
-  background-image: url('../assets/images/bgpink.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  //background-image: url('../assets/images/bgpink.png');
+    background: url('../assets/icons/noise-light.png'), #bfbfba ;  
+  background-size: contain;
+  background-repeat: repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
