@@ -1,6 +1,13 @@
 @import "base";
 
 #symbionts {
+
+  h1 {
+@include max($bp-tablet-px) {
+    margin-bottom: 1rem;
+    }
+
+  }
   .symbionts-content {
     display: flex;
     gap: 2rem;
@@ -11,7 +18,7 @@
   }
 
   .symbionts-cover {
-    background-image: url("../assets/images/aprildancer-artwork.jpeg");
+    background-image: url("../assets/images/Karaba-FC-Pochette-Symbionts_Digital_FRONT.png");
     background-size: cover;
     background-position: center;
 
@@ -34,12 +41,20 @@
 
     @include max($bp-tablet-px) {
       width: 100%;
+      padding: 0;
     }
 
     h2 {
-      font-size: clampRem(20, 28, $bp-mobile, $bp-regular);
+      font-size: clampRem(25, 28, $bp-mobile, $bp-regular);
       font-weight: 300;
       margin-top: 0;
+    }
+
+
+
+    p {
+            font-size: clampRem(16, 18, $bp-mobile, $bp-regular);
+
     }
 
     a {
@@ -91,5 +106,10 @@
     .button-87:active {
       transform: scale(0.95);
     }
+  }
+  
+
+  .video {
+    margin-top: 0;
   }
 }

@@ -3,6 +3,7 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 import KarabaK7 from "../assets/images/Karaba-F.C-k7.jpeg"
 import KarabaVinyl from "../assets/images/vinyl-aprildancer-karabafc.jpeg"
+import KarabaVinylSymbionts from "../assets/images/karaba-fc-symbionts-vinyles.jpg"
 import KarabaTshirt from "../assets/images/Karaba-F.C-tshirt2.png"
 
 import "../styles/base.scss"
@@ -17,44 +18,61 @@ const Merch = ({ location }) => {
         <h1>Merch</h1>
 
         <div className="merchandise-list">
+          {/* <div className="merchandise-item">
+            <div className="merchandise-img">
+              <img src={KarabaVinylSymbionts} alt="Vinyle April Dancer de Karaba-F.C" />
+            </div>
+            <div className="merchandise-description">
+              <h2>Vinyle SYMBIONTS</h2>
+              <p>1er pressage</p>
 
-        <div className="merchandise-item">
+              <p>
+                <a
+                  className="underline"
+                  href="https://voturecords.com/product/votu083-karaba-fc-symbionts-12/"
+                >
+                  Acheter sur Voice Of The Unheard Records (FR)
+                </a>
+              </p>
+            </div>
+          </div>
+ */}
+          <div className="merchandise-item">
             <div className="merchandise-img">
               <img src={KarabaVinyl} alt="Vinyle April Dancer de Karaba-F.C" />
             </div>
             <div className="merchandise-description">
               <h2>Vinyle April Dancer</h2>
               <p>1er pressage</p>
-              <p>Édition Limitée</p>
-              <p><a
-                className="underline"
-                href="https://aladeriverecords.bandcamp.com/album/d-rive-6-april-dancer-par-karaba-f-c"
-              >
-                Acheter via À La Dérive Records (FR)
-              </a>
+            
+              <p>
+                <a
+                  className="underline"
+                  href="https://aladeriverecords.bandcamp.com/album/d-rive-6-april-dancer-par-karaba-f-c"
+                >
+                  Acheter via À La Dérive Records (FR)
+                </a>
               </p>
               <p>
-
-              <a
-                className="underline"
-                href="https://ripcordrecords.bandcamp.com/album/april-dancer"
-              >
-                Buy via Ripcord Records (UK)
-              </a>
-              </p> 
+                <a
+                  className="underline"
+                  href="https://ripcordrecords.bandcamp.com/album/april-dancer"
+                >
+                  Buy via Ripcord Records (UK)
+                </a>
+              </p>
               <p>
-              <a
-                className="underline"
-                href="https://www.clevereagle.com/collections/clever-eagle-vinyl/products/karaba-fc-april-dancer-ep-vinyl"
-              >
-                Buy via Clever Eagle (US)
-              </a>
+                <a
+                  className="underline"
+                  href="https://www.clevereagle.com/collections/clever-eagle-vinyl/products/karaba-fc-april-dancer-ep-vinyl"
+                >
+                  Buy via Clever Eagle (US)
+                </a>
               </p>
             </div>
           </div>
 
-
-       {/*  <div className="merchandise-item">
+          {/*  <div className="merchandise-item">
             <div className="merchandise-img">
               <img
                 src={KarabaTshirt}
@@ -94,5 +112,7 @@ const Merch = ({ location }) => {
     </Layout>
   )
 }
-export const Head = () => <Seo title="Merch" description="KARABA F.C. Merch - Vinyle, k7, tshirts" />
+export const Head = () => (
+  <Seo title="Merch" description="KARABA F.C. Merch - Vinyle, k7, tshirts" />
+)
 export default Merch

@@ -5,6 +5,8 @@ import Seo from "../components/seo"
 import "../styles/base.scss"
 import "../styles/musique.scss"
 
+import YoIcon from "../assets/svg/icon-youtube.inline.svg"
+import TidIcon from "../assets/svg/icon-tidal.inline.svg"
 import AmIcon from "../assets/svg/icon-applemusic.inline.svg"
 import BcIcon from "../assets/svg/icon-bandcamp.inline.svg"
 import SpoIcon from "../assets/svg/icon-spotify.inline.svg"
@@ -123,6 +125,9 @@ const Music = ({ location }) => {
         </div>
 
         <div className="icons">
+            <a href="https://tidal.com/browse/artist/28027709?u">
+            <TidIcon />
+          </a>
           <a href="https://open.spotify.com/album/5iB0BwdGPSTp2HwSPpp3YD">
             <SpoIcon />
           </a>
@@ -134,6 +139,9 @@ const Music = ({ location }) => {
           </a>
           <a href="https://www.deezer.com/fr/album/271193162">
             <DeeIcon />
+          </a>
+           <a href="https://www.youtube.com/channel/UCqciBctRudbiEhaFXxfdxLw">
+            <YoIcon />
           </a>
         </div>
 

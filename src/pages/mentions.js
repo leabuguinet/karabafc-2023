@@ -13,7 +13,7 @@ const Mentions = ({ location }) => {
         <h2>Développement site & Design :</h2>
         
             <p>Email : lea.buguinet@gmail.com</p>
-            <p className='p-mb'>Site Web : www.leab.me</p>
+            <p className='p-mb'>Site Web : www.leabugui.net</p>
         
         <h2>Hébergement :</h2>
         
@@ -24,8 +24,7 @@ const Mentions = ({ location }) => {
         <h2>Crédits :</h2>
         
             <p>Pictogrammes : https://icones8.fr/</p>
-{/*             <p>Photo haut de page : Alex Lerum</p>
-            <p className='p-mb'>Photo bas de page : Marcos Paulo Prado</p> */}
+
 
         <h2>Cookies :</h2>
 

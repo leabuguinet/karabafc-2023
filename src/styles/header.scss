@@ -23,16 +23,21 @@ header {
     width: 50%;
     height: 400px; /* adjust as needed */
     position: relative;
-    -webkit-mask-image: url("../assets/icons/svg5.svg");
+    -webkit-mask-image: url("../assets/icons/karaba-fc-logo-2025.svg");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
-    mask-image: url("../assets/icons/svg5.svg");
+    mask-image: url("../assets/icons/karaba-fc-logo-2025.svg");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
     background: transparent;
     overflow: hidden;
+
+    @include max($bp-tablet-px){
+         height: 50px;
+         margin-bottom: 4rem;
+     }
   }
   .logo {
     width: clampRem(120, 150, $bp-mobile, $bp-regular);

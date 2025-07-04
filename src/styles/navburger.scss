@@ -1,10 +1,9 @@
 @import "base";
 
 .navburger-button {
-
-    @include max($bp-tablet-px){
-        display: flex;
-    }
+  @include max($bp-tablet-px) {
+    display: flex;
+  }
 
   cursor: pointer;
   z-index: 150;
@@ -19,8 +18,8 @@
   height: 2px;
   background-color: white;
   transition: all 0.6s ease-in-out;
-  
-  &::before  {
+
+  &::before {
     content: "";
     width: 20px;
     height: 2px;
@@ -31,7 +30,7 @@
     top: 5px;
     transition: all 0.6s ease-in-out;
   }
-  &::after  {
+  &::after {
     content: "";
     width: 20px;
     height: 2px;
@@ -43,76 +42,89 @@
     transition: all 0.6s ease-in-out;
   }
 
-    &.openMenu-arrow {
+  &.openMenu-arrow {
     transition: all 0.6s ease-in-out;
 
-    &::after{
-        transform: rotate(90deg) translate(5px, -0px);
-        transform-origin: center;
-
+    &::after {
+      transform: rotate(90deg) translate(5px, -0px);
+      transform-origin: center;
     }
-    &::before{
-        //transform: rotate(45deg);
-        transform-origin: 0;
-        opacity: 0;
-
+    &::before {
+      //transform: rotate(45deg);
+      transform-origin: 0;
+      opacity: 0;
     }
 
     transform: rotate(45deg);
-
-    }
+  }
 }
 
 .navburger {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    background-color: #4b3b46;
-    z-index: -100;
-    top: 0;
-    opacity: 0;
-    transition: all 0.6s ease-in-out;
-  
-    &.openMenu {
-      position: sticky;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  //background-color: white;
+  background: url('../assets/icons/noise-light.png'), $bg ;  
+  z-index: -100;
+  top: 0;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+
+  &.openMenu {
+    position: sticky;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 100;
+    overflow-y: hidden;
+  }
+
+  .navbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    height: 100%;
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    a {
+      color: $green;
+      text-decoration: none;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      font-size: 1.6rem;
+      font-family: "League Spartan", sans-serif;
+      font-weight: 400;
+      position: relative;
+      text-transform: lowercase;
+    }
+
+    .logo-mask {
+      padding: 2rem;
+      mask-type: alpha;
+      width: 200px;
+      max-width: 350px;
+      height: 100px; /* adjust as needed */
+      position: relative;
+      -webkit-mask-image: url("../assets/icons/karaba-fc-logo-2025.svg");
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: contain;
+      mask-image: url("../assets/icons/karaba-fc-logo-2025.svg");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      background: transparent;
       overflow: hidden;
-      opacity: 1;
-      z-index: 100;
-      overflow-y: hidden;
     }
-
-
-    .navbar {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
-        align-content: center;
-        gap: 50px;
-        height: 100%;
-
-        .logo {
-            width: 100px;
-            height: 100px;
-            position: relative;
-        }
-
-        a {
-            color: #ffffff;
-            text-decoration: none;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-            font-size: 1.2rem;
-            font-family: 'League Spartan', sans-serif;
-            font-weight: 600;
-            position: relative;
-        }
-    }
-
-
-
-
+  }
 }

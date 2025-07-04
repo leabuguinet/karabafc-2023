@@ -13,19 +13,20 @@
       flex-direction: column;
       
       span {
-        color: #baa4b9;
+        color: $blue;
         font-weight: 400;
-        font-size: 0.7rem;
-        margin-top: 5px;
+        font-size: clampRem(12, 16, $bp-mobile, $bp-regular);
+        margin-top: 0px;
       }
 
       img {
         width: 100%;
+        margin-bottom: 0;
       }
     }
 
     a {
-      color: #ffffff;
+      color: $green;
       margin-top: 2rem;
     }
 

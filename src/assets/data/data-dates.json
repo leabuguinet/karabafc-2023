@@ -325,5 +325,15 @@
         "location": "Le Klub",
         "eventlink": "https://www.helloasso.com/associations/headache-booking/evenements/gillian-carter-crossed-karaba-fc",
         "description": ""
+    },
+    {
+        "id": "32",
+        "day": "21",
+        "month": "06",
+        "year": "2025",
+        "city": "Paris",
+        "location": "Fête de la musique - La Pointe Lafayette",
+        "eventlink": "https://www.facebook.com/events/1649805915713984/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
+        "description": ""
     }
 ]

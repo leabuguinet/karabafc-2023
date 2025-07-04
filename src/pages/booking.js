@@ -11,7 +11,7 @@ const Booking = ({ location }) => {
 
   return (
     <Layout pageUrl={pageUrl}>
-      <div className="main-content musique">
+      <div className="main-content">
         <h1 name="up" id="test">
           Booking
         </h1>

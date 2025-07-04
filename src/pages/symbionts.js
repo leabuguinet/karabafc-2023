@@ -39,8 +39,8 @@ const Symbionts = ({ location }) => {
             <h2>SYMBIONTS</h2>
             <p>Sortie le 17 octobre 2025</p>
 
-            <a className="button-87" href="#">Précommandez&nbsp;le&nbsp;vinyle</a>
-         
+{/*             <a className="button-87" target="_blank" href="https://voturecords.com/product/votu083-karaba-fc-symbionts-12/">Précommandez&nbsp;le&nbsp;vinyle</a>
+ */}         
 
           </div>
 
@@ -49,7 +49,7 @@ const Symbionts = ({ location }) => {
         <h1>Nouveau single</h1>
         <div className="video">
           <iframe
-            src="https://www.youtube.com/embed/Z0992lzbbXU?si=q-KIr548bjMu8cup"
+            src="https://www.youtube.com/embed/4G8GQkTBdTM?si=FY5-qPmDhrLm5MKs"
             title="videoTitle"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             webkitallowfullscreen="true"
@@ -57,7 +57,6 @@ const Symbionts = ({ location }) => {
             allowFullScreen
           />
         </div>
-
         
 
       </div>
@@ -73,6 +72,6 @@ const Symbionts = ({ location }) => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Dates de concert" description="Prochaines dates de concert de KARABA F.C." />
+export const Head = () => <Seo title="NOUVEL ALBUM" description="Sortie de l'album SYMBIONTS le 17 octobre 2025 - Découvrez le premier single Tides" />
 
 export default Symbionts

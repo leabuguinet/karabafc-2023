@@ -204,6 +204,14 @@
   justify-content: center;
   padding: 2rem 0 4rem 0;
   gap: clampRem(15, 40, $bp-tablet, $bp-regular);
+  flex-wrap: wrap;
+
+  a {
+     @include max($bp-tablet-px){
+         width: calc(100% / 3 - 2rem);
+     }
+  }
+
 
   svg:hover {
     transform: scale(1.08);
@@ -211,6 +219,12 @@
 
   svg {
     transition: 1s ease-in-out;
+    fill: $green !important;
+    width: 100%;
+
+   path {
+    fill: $green;
+   }
   }
 
   /* @media ${device.mobileM} { 

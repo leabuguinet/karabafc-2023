@@ -27,10 +27,11 @@ main {
     flex-direction: row;
     max-width: 1400px;
     margin: 0 auto;
+    justify-content: center; 
 
     @include max($bp-tablet-px){
-        display: block;
-     }
+       display: unset;
+    }
 }
 
 
@@ -42,12 +43,10 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 70vh;
+    padding-right: 2rem;
 
     @include max($bp-tablet-px){
-        
-       max-width: 85%;
-       margin: 0 auto;
-       //margin-top: 2rem;
+        padding: 0 2rem !important;
     }
 }
 
@@ -99,6 +98,7 @@ span {
 
 .container {
     width: 75%;
+    
 }
 
 
