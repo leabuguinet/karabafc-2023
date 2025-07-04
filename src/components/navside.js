@@ -49,6 +49,7 @@ const NavSide = () => {
 
   return (
     <>
+    <div>
       <div className="nav-container">
         {/*         <a href="https://karabafc.com" className="logo">
           <img src={karabalogo} alt="KARABA FC" />
@@ -74,6 +75,7 @@ const NavSide = () => {
             booking
           </Link>
         </div>
+      </div>
       </div>
     </>
   )

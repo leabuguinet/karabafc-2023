@@ -33,6 +33,7 @@
     //width: 100%;
     //padding: 0px 25px;
     //background-color: #00001acc;
+    color: white;
 
     background-color: rgb(26 15 24 / 80%);
     -webkit-transition: all 0.35s ease;
@@ -45,6 +46,7 @@
       margin-bottom: 2rem;
       text-transform: uppercase;
       font-weight: 400;
+      color: white;
 
         @include max(422px) {
             margin-bottom: 5px;
@@ -65,7 +67,12 @@
     h3,
     p {
       padding: 0 1.5rem;
+      color: white;
     }
+
+    span, p {
+      font-weight: 300;
+    } 
 
     &:before {
       position: absolute;

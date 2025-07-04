@@ -7,8 +7,9 @@
   //height: 700px;
   width: 400px;
   width: clampRem(300, 400, $bp-tablet, $bp-regular);
+  //position: sticky;
   position: sticky;
-  top: 10px;
+  top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,12 +45,20 @@
     overflow: hidden;
   }
 
+  .logo {
+     position: sticky;
+    top: 2rem;
+
+  }
+
   .navbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     padding: 2rem;
+    position: sticky;
+    top: 4rem;
 
     &::after {
       content: "";

@@ -30,7 +30,7 @@
     border-radius: 20px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.226);
     transition: background-color ease-in-out 0.5s;
     position: relative;
 
@@ -79,13 +79,13 @@
       }
 
       a {
-        color: #ffffff;
+        color: $purple;
         text-decoration: none;
         font-weight: 600;
       }
 
       a:hover {
-        color: #baa4b9;;
+        color: $violet;
       }
 
       .underline {
@@ -99,7 +99,7 @@
         right: 0;
         width: 0;
         height: 1px;
-        background-color: #baa4b9;;
+        background-color: $violet;
         transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
       }
 

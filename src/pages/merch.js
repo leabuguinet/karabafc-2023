@@ -54,7 +54,7 @@ const Merch = ({ location }) => {
           </div>
 
 
-        <div className="merchandise-item">
+       {/*  <div className="merchandise-item">
             <div className="merchandise-img">
               <img
                 src={KarabaTshirt}
@@ -66,9 +66,9 @@ const Merch = ({ location }) => {
               <p>Earth Positive - Climate neutral</p>
               <p>Disponible en concert !</p>
             </div>
-          </div>
+          </div> */}
 
-          <div className="merchandise-item">
+          {/* <div className="merchandise-item">
             <div className="merchandise-img">
               <img src={KarabaK7} alt="K7 de Empty Rooms du groupe Karaba-F.C" />
             </div>
@@ -88,7 +88,7 @@ const Merch = ({ location }) => {
                 Acheter via BandCamp
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>

@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import "../styles/base.scss"
-import "../styles/tour.scss"
+import "../styles/symbionts.scss"
 
 
 
@@ -25,10 +25,38 @@ const Symbionts = ({ location }) => {
     <>
       <Layout pageUrl={pageUrl}>
       
-      <div className='main-content tour'>
+      <div className='main-content' id="symbionts">
         <h1>Nouvel album</h1>
   
+        <div className='symbionts-content'>
 
+          <div className='symbionts-cover'>
+
+          </div>
+
+          <div className='symbionts-description'>
+
+            <h2>SYMBIONTS</h2>
+            <p>Sortie le 17 octobre 2025</p>
+
+            <a className="button-87" href="#">Précommandez&nbsp;le&nbsp;vinyle</a>
+         
+
+          </div>
+
+        </div>
+
+        <h1>Nouveau single</h1>
+        <div className="video">
+          <iframe
+            src="https://www.youtube.com/embed/Z0992lzbbXU?si=q-KIr548bjMu8cup"
+            title="videoTitle"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowFullScreen
+          />
+        </div>
 
         
 

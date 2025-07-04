@@ -14,7 +14,7 @@
   border-radius: 20px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.205);
   transition: background-color ease-in-out 0.5s;
 
     @include min($bp-tablet-px) {
@@ -43,9 +43,10 @@
     background: linear-gradient(
       130deg,
       #00001a00 0%,
-      #debbb54f 42%,
-      #4d543154 42%,
-      #ecc852be
+      #debbb54f 12%,
+      #ecc8528f 60%,
+      #4d543154 100%,
+  
     );
 
     opacity: 0;
@@ -68,7 +69,7 @@
     span {
       line-height: 1.2;
       font-size: 2rem;
-      font-weight: 600;
+      font-weight: 500;
       top: -23px;
       left: 10px;
       /* @media ${device.mobileXL} { 
@@ -103,7 +104,7 @@
 
     span {
       margin-right: 4px;
-      font-weight: 300;
+      font-weight: 400;
       text-align: start;
 
       @include max($bp-mobile-px){
